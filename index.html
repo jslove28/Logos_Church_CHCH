@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="로고스교회 - 세대를 잇는 교회" />
   <meta property="og:description" content="크라이스트처치 로고스교회에 오신 것을 환영합니다. 함께 자라는 믿음의 공동체입니다." />
-  <meta property="og:image" content="assets/Logos/logos-church.png" />
+  <meta property="og:image" content="logos-church.jpg" />
 
   <!-- [폰트 & 아이콘] -->
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
@@ -105,7 +105,7 @@
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
     
-    /* [수정됨] About 섹션 그리드 - 더 균형잡힌 모습으로 변경 */
+    /* [수정됨] About 섹션 그리드 */
     .grid-about-new { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: start; }
 
     /* 카드 */
@@ -165,16 +165,20 @@
   <header>
     <div class="container nav-inner">
       <a href="#" class="logo">
-        <img src="assets/Logos/logos-church.png" alt="Logos Church" style="height: 80px; border-radius: 4px; object-fit: contain;" onerror="this.style.display='none'">
+        <!-- [수정됨] 로고 이미지 표시 방식 개선 -->
+        <!-- onerror="this.style.display='none'" 코드를 삭제하여 이미지가 없어도 엑스박스나 alt 텍스트가 보이게 수정 -->
+        <img src="assets\Logos\logos-church.png" alt="Logos Church Logo" style="height: 80px; border-radius: 4px; object-fit: contain;">
+        
         <div style="display:flex; flex-direction:column; line-height: 1.1;">
-          <span style="font-weight: 800; font-size: 18px;">LOGOS CHURCH</span>
+          <span style="font-weight: 800; font-size: 18px; color: #222;">LOGOS CHURCH</span>
           <span style="font-size: 11px; font-weight: 500; color: #666;">크라이스트처치 로고스교회</span>
         </div>
       </a>
       
       <nav class="nav-menu">
-        <a href="#about">교회소개</a>
+        <a href="#welcome">인사말</a>
         <a href="#faith">믿음과 비전</a>
+        <a href="#about">교회소개</a>
         <a href="#worship">예배안내</a>
         <a href="#sermon">설교영상</a>
         <a href="#news">교회소식</a>
@@ -187,8 +191,9 @@
     </div>
 
     <div class="mobile-nav" id="mobileNav">
-      <a href="#about" onclick="toggleMenu()">교회소개</a>
+      <a href="#welcome" onclick="toggleMenu()">인사말</a>
       <a href="#faith" onclick="toggleMenu()">믿음과 비전</a>
+      <a href="#about" onclick="toggleMenu()">교회소개</a>
       <a href="#worship" onclick="toggleMenu()">예배안내</a>
       <a href="#sermon" onclick="toggleMenu()">설교영상</a>
       <a href="#news" onclick="toggleMenu()">교회소식</a>
@@ -205,61 +210,38 @@
     </div>
   </section>
 
-  <!-- [수정된 부분] 교회 소개 (About) -->
-  <section id="about" class="section">
-    <div class="container grid-about-new">
-      
-      <!-- 1. 텍스트 소개 영역 -->
-      <div>
-        <h4 style="color: var(--accent); font-weight: 700; margin: 0 0 10px;">WELCOME</h4>
-        <h2 style="margin: 0 0 25px;">환영합니다</h2>
-        <p style="font-size: 17px; color: #444; line-height: 1.8; margin-bottom: 30px;">
-          로고스교회는 크라이스트처치 지역 사회 속에서 그리스도의 사랑을 실천하며, 
-          한 사람 한 사람이 하나님 앞에서 온전한 예배자로 세워지기를 소망합니다.
-          <br><br>
-          우리는 성경적 가치를 따르며, 이민 사회의 특수성 속에서도 
-          서로를 위로하고 격려하는 영적 가족이 되고자 합니다.
-        </p>
-
-        <!-- 섬기는 사람들 리스트 -->
-        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; border: 1px solid #eee;">
-          <h3 style="font-size: 16px; margin: 0 0 15px; color: #333;">섬기는 사람들</h3>
-          <ul style="font-size: 15px; color: #555; line-height: 1.8; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px;">
-            <li><strong>담임목사:</strong> 추동완</li>
-            <li><strong>교육목사:</strong> 강경문</li>
-            <li><strong>동역목사:</strong> 김영출 (선교)</li>
-            <li><strong>동역목사:</strong> 배태현</li>
-            <li><strong>명예장로:</strong> 박정래, 조영만</li>
-            <li><strong>반 주 자:</strong> 임은혜</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 2. 목사님 인사말 카드 (디자인 변경됨) -->
-      <div class="card" style="padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: none; background: #fff;">
-        <h3 style="margin: 0 0 15px; font-size: 20px; color: var(--accent);">함께 걷는 기쁨</h3>
-        <p style="font-size: 15px; color: #555; margin-bottom: 25px; line-height: 1.7;">
-          "로고스교회를 찾아주신 여러분을 환영합니다. 
-          하나님의 말씀 위에 세워진 공동체로서, 세대와 문화를 넘어 함께 자라가는 교회를 꿈꿉니다."
-        </p>
+  <!-- [순서 변경 1] 환영 메시지 (가장 먼저) -->
+  <section id="welcome" class="section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h4 style="color: var(--accent); font-weight: 700; margin: 0 0 10px;">WELCOME MESSAGE</h4>
+        <h2 style="margin: 0 0 40px;">함께 걷는 기쁨</h2>
         
-        <!-- 프로필 영역 (사진 조금 더 크게 조정: 90px) -->
-        <div style="display: flex; align-items: center; gap: 20px; border-top: 1px solid #eee; padding-top: 25px;">
-          <!-- 사진 크기 90px로 키우고 그림자 효과 추가 -->
-          <div style="width: 90px; height: 90px; border-radius: 50%; overflow: hidden; background: #eee; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-            <img src="assets/Pastor Chu.png" alt="추동완 목사" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/200x200?text=Foto'">
+        <div class="card" style="padding: 40px; border: none; background: #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.06);">
+          <div style="font-size: 18px; color: #444; margin-bottom: 30px; line-height: 1.8;">
+            "로고스교회를 찾아주신 여러분을 환영합니다.<br>
+            하나님의 말씀 위에 세워진 공동체로서,<br>
+            세대와 문화를 넘어 함께 자라가는 교회를 꿈꿉니다.<br><br>
+            그리스도의 사랑 안에서 여러분과 함께<br>
+            믿음의 여정을 걸어가기를 소망합니다."
           </div>
-          <div>
-            <div style="font-weight: 700; font-size: 17px; color: #333; margin-bottom: 4px;">추동완 목사</div>
-            <div style="font-size: 14px; color: #888;">담임목사</div>
+
+          <!-- 프로필 영역 -->
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <div style="width: 90px; height: 90px; border-radius: 50%; overflow: hidden; background: #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <img src="assets/Pastor Chu.png" alt="추동완 목사" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/200x200?text=Foto'">
+            </div>
+            <div>
+              <div style="font-weight: 700; font-size: 17px; color: #333;">추동완 목사</div>
+              <div style="font-size: 14px; color: #888;">담임목사 드림</div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- 믿음과 비전 -->
+  <!-- [순서 변경 2] 믿음과 비전 (중간 배치) -->
   <section id="faith" class="section gray">
     <div class="container">
       <div class="section-header">
@@ -304,8 +286,41 @@
     </div>
   </section>
 
+  <!-- [순서 변경 3] 교회 소개 및 섬기는 분들 (마지막 배치) -->
+  <section id="about" class="section">
+    <div class="container grid-about-new">
+      
+      <!-- 교회 일반 소개 -->
+      <div>
+        <h4 style="color: var(--accent); font-weight: 700; margin: 0 0 10px;">ABOUT US</h4>
+        <h2 style="margin: 0 0 25px;">교회 소개</h2>
+        <p style="font-size: 17px; color: #444; line-height: 1.8; margin-bottom: 30px;">
+          로고스교회는 크라이스트처치 지역 사회 속에서 그리스도의 사랑을 실천하며, 
+          한 사람 한 사람이 하나님 앞에서 온전한 예배자로 세워지기를 소망합니다.
+          <br><br>
+          우리는 성경적 가치를 따르며, 이민 사회의 특수성 속에서도 
+          서로를 위로하고 격려하는 영적 가족이 되고자 합니다.
+        </p>
+      </div>
+
+      <!-- 섬기는 사람들 (인물 정보 후순위 배치) -->
+      <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; border: 1px solid #eee;">
+        <h3 style="font-size: 18px; margin: 0 0 20px; color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px;">섬기는 사람들</h3>
+        <ul style="font-size: 15px; color: #555; line-height: 2.2;">
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #eee;"><span>담임목사</span> <strong>추동완</strong></li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #eee;"><span>교육목사</span> <strong>강경문</strong></li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #eee;"><span>동역목사</span> <strong>김영출 (선교)</strong></li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #eee;"><span>동역목사</span> <strong>배태현</strong></li>
+          <li style="display:flex; justify-content:space-between; border-bottom:1px solid #eee;"><span>명예장로</span> <strong>박정래, 조영만</strong></li>
+          <li style="display:flex; justify-content:space-between;"><span>반 주 자</span> <strong>임은혜</strong></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
   <!-- 예배 안내 -->
-  <section id="worship" class="section">
+  <section id="worship" class="section gray">
     <div class="container grid-2" style="align-items: center;">
       <div>
         <h4 style="color: var(--accent); font-weight: 700; margin: 0 0 10px;">WORSHIP</h4>
@@ -334,7 +349,7 @@
   </section>
 
   <!-- 설교 영상 -->
-  <section id="sermon" class="section gray">
+  <section id="sermon" class="section">
     <div class="container">
       <div style="display:flex; justify-content:space-between; align-items:end; margin-bottom:30px;">
         <div>
@@ -348,7 +363,7 @@
   </section>
 
   <!-- 행사 영상 -->
-  <section id="events-video" class="section">
+  <section id="events-video" class="section gray">
     <div class="container">
       <div style="display:flex; justify-content:space-between; align-items:end; margin-bottom:30px;">
         <div>
@@ -362,7 +377,7 @@
   </section>
 
   <!-- 교회 소식 -->
-  <section id="news" class="section gray">
+  <section id="news" class="section">
     <div class="container grid-2">
       <div>
         <h4 style="color: var(--accent); font-weight: 700; margin: 0 0 10px;">NEWS</h4>
@@ -379,7 +394,7 @@
   </section>
 
   <!-- 오시는 길 -->
-  <section id="location" class="section">
+  <section id="location" class="section gray">
     <div class="container">
       <div class="section-header">
         <h4>LOCATION</h4>
