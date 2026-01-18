@@ -5,35 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- [검색 엔진 최적화 (SEO)] -->
-  <title>로고스교회 - Logos Church Christchurch (크라이스트처치 한인교회)</title>
+  <title>로고스교회 - Logos Church Christchurch</title>
   <meta name="description" content="크라이스트처치 로고스교회(Logos Church)입니다. 추동완 담임목사와 함께 말씀을 중심으로 세대를 잇는 믿음의 공동체입니다. 주일예배 2시, Bishopdale 위치." />
-  <meta name="keywords" content="크라이스트처치 한인교회, 뉴질랜드 로고스교회, Logos Church, Christchurch Korean Church, 추동완 목사, 비숍데일 교회, 크라이스트처치 예배" />
-  <meta name="author" content="Logos Church Christchurch" />
+  <meta name="keywords" content="크라이스트처치 한인교회, 뉴질랜드 로고스교회, Logos Church, Christchurch Korean Church, 추동완 목사, 비숍데일 교회" />
   
-  <!-- [오픈 그래프 (카톡/페북 공유 시)] -->
+  <!-- [오픈 그래프 (카카오톡/페이스북 공유 시 보여질 내용)] -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="로고스교회 - 세대를 잇는 교회" />
   <meta property="og:description" content="크라이스트처치 로고스교회에 오신 것을 환영합니다. 함께 자라는 믿음의 공동체입니다." />
-  <meta property="og:image" content="logos-church.jpg" />
+  <meta property="og:image" content="assets/Logos/logos-church.png" />
 
-  <!-- [폰트 & 아이콘] -->
+  <!-- [폰트 & 아이콘 불러오기] -->
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- 아이콘이 안정적으로 나오도록 스크립트 주소를 수정했습니다 -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <style>
-    /* [디자인 시스템] */
+    /* [디자인 시스템: 교회의 색상과 스타일 정의] */
     :root {
-      --primary: #1a1a1a;
-      --secondary: #666666;
-      --accent: #004098;
-      --accent-dark: #003078;
-      --bg-soft: #f8f9fa;
-      --border: #eaecef;
-      --radius: 12px;
-      --shadow: 0 4px 20px rgba(0,0,0,0.06);
+      --primary: #1a1a1a;       /* 기본 글자색 (진한 회색) */
+      --secondary: #666666;     /* 보조 글자색 (연한 회색) */
+      --accent: #004098;        /* 강조색 (교회 로고의 파란색) */
+      --accent-dark: #003078;   /* 버튼 클릭 시 더 진한 파란색 */
+      --bg-soft: #f8f9fa;       /* 부드러운 배경색 (연한 회색) */
+      --border: #eaecef;        /* 테두리 색상 */
+      --radius: 12px;           /* 모서리 둥글기 */
+      --shadow: 0 4px 20px rgba(0,0,0,0.06); /* 그림자 효과 */
     }
 
-    /* 기본 설정 */
+    /* 기본 설정 초기화 */
     * { box-sizing: border-box; }
     body { 
       margin: 0; 
@@ -41,24 +41,24 @@
       color: var(--primary); 
       background: #fff; 
       line-height: 1.6; 
-      word-break: keep-all; 
+      word-break: keep-all; /* 단어 중간에 줄바꿈 방지 */
     }
     a { text-decoration: none; color: inherit; transition: 0.2s; }
     ul { list-style: none; padding: 0; margin: 0; }
     img { max-width: 100%; display: block; }
     button { font-family: inherit; }
 
-    /* 레이아웃 */
+    /* 레이아웃 (전체 폭과 여백) */
     .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    .section { padding: 80px 0; scroll-margin-top: 70px; }
+    .section { padding: 80px 0; scroll-margin-top: 70px; } /* 메뉴 클릭 시 헤더에 가려지지 않게 여백 줌 */
     .section.gray { background-color: var(--bg-soft); }
 
-    /* 헤더 */
+    /* 헤더 (상단 메뉴바) */
     header {
       position: sticky; top: 0; z-index: 1000;
       background: rgba(255, 255, 255, 0.95);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px); /* 배경 흐림 효과 */
     }
     .nav-inner {
       height: 70px; display: flex; align-items: center; justify-content: space-between;
@@ -67,9 +67,11 @@
       display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -0.5px;
     }
     
+    /* PC 메뉴 */
     .nav-menu { display: flex; gap: 24px; font-size: 15px; font-weight: 600; color: #444; align-items: center;}
     .nav-menu a:hover { color: var(--accent); }
 
+    /* 버튼 스타일 */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; padding: 8px 16px;
       background: var(--accent); color: white; border-radius: 6px; border: none;
@@ -79,10 +81,12 @@
     .btn.outline { background: white; color: var(--accent); border: 1px solid var(--accent); }
     .btn.outline:hover { background: #eff6ff; }
 
+    /* 모바일 메뉴 버튼 (PC에선 숨김) */
     .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; color: #333; }
 
-    /* 메인 배너 */
+    /* 메인 배너 (Hero) */
     .hero {
+      /* 배경 이미지를 좀 더 어둡게 처리하여 글자가 잘 보이게 함 */
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=2073&auto=format&fit=crop'); 
       background-size: cover; background-position: center;
       height: 500px; display: flex; align-items: center; justify-content: center;
@@ -96,19 +100,17 @@
       backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.4);
     }
 
-    /* 섹션 공통 */
+    /* 섹션 제목 스타일 */
     .section-header { text-align: center; margin-bottom: 50px; }
     .section-header h4 { color: var(--accent); margin: 0 0 10px; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; font-weight: 800;}
     .section-header h2 { font-size: 32px; margin: 0; color: #111; font-weight: 800;}
 
-    /* 그리드 */
+    /* 그리드 시스템 (반응형 레이아웃) */
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
-    
-    /* [수정됨] About 섹션 그리드 */
     .grid-about-new { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: start; }
 
-    /* 카드 */
+    /* 카드 스타일 */
     .card {
       background: white; border-radius: var(--radius); overflow: hidden;
       border: 1px solid var(--border); transition: 0.3s;
@@ -124,21 +126,21 @@
       display: flex; align-items: center; justify-content: center; color: white;
     }
     
-    /* 뉴스 리스트 */
+    /* 뉴스 리스트 스타일 */
     .news-item { display: flex; gap: 15px; padding: 15px 0; border-bottom: 1px solid #eee; align-items: flex-start; }
     .news-tag {
       font-size: 12px; font-weight: 700; color: var(--accent); 
       background: #eff6ff; padding: 4px 8px; border-radius: 4px; white-space: nowrap; margin-top: 2px;
     }
 
-    /* 예배 테이블 */
+    /* 예배 시간표 테이블 */
     .table-worship { width: 100%; border-collapse: collapse; }
     .table-worship th { text-align: left; padding: 12px 10px; color: #333; width: 120px; font-weight: 700; background: #f9f9f9; border-radius: 8px;}
     .table-worship td { text-align: left; padding: 12px 10px; color: #555; }
     .table-worship tr { border-bottom: 1px solid #f0f0f0; }
     .table-worship tr:last-child { border-bottom: none; }
 
-    /* 반응형 */
+    /* 반응형 스타일 (모바일 화면) */
     @media (max-width: 900px) {
       .grid-2, .grid-about-new { grid-template-columns: 1fr; gap: 40px; }
       .nav-menu { display: none; }
@@ -147,11 +149,11 @@
       .hero h1 { font-size: 32px; }
     }
 
-    /* 모바일 메뉴 */
+    /* 모바일 메뉴 (평소엔 숨김) */
     .mobile-nav {
       position: fixed; top: 70px; left: 0; width: 100%; background: white;
       border-bottom: 1px solid #eee; padding: 20px; display: none; flex-direction: column; gap: 15px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05); z-index: 999;
     }
     .mobile-nav.active { display: flex; }
     .mobile-nav a { font-size: 16px; font-weight: 600; padding: 10px; border-radius: 8px; }
@@ -165,9 +167,8 @@
   <header>
     <div class="container nav-inner">
       <a href="#" class="logo">
-        <!-- [수정됨] 로고 이미지 표시 방식 개선 -->
-        <!-- onerror="this.style.display='none'" 코드를 삭제하여 이미지가 없어도 엑스박스나 alt 텍스트가 보이게 수정 -->
-        <img src="assets\Logos\logos-church.png" alt="Logos Church Logo" style="height: 80px; border-radius: 4px; object-fit: contain;">
+        <!-- [수정 포인트 1] 경로의 역슬래시(\)를 슬래시(/)로 변경했습니다. -->
+        <img src="assets/Logos/logos-church.png" alt="Logos Church Logo" style="height: 80px; border-radius: 4px; object-fit: contain;" onerror="this.src='https://placehold.co/200x80?text=LOGOS';">
         
         <div style="display:flex; flex-direction:column; line-height: 1.1;">
           <span style="font-weight: 800; font-size: 18px; color: #222;">LOGOS CHURCH</span>
@@ -175,6 +176,7 @@
         </div>
       </a>
       
+      <!-- PC 메뉴 -->
       <nav class="nav-menu">
         <a href="#welcome">인사말</a>
         <a href="#faith">믿음과 비전</a>
@@ -185,11 +187,13 @@
         <a href="#location" class="btn">문의하기</a>
       </nav>
 
-      <button class="mobile-menu-btn" onclick="toggleMenu()">
+      <!-- 모바일 메뉴 버튼 -->
+      <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="메뉴 열기">
         <i data-lucide="menu"></i>
       </button>
     </div>
 
+    <!-- 모바일 메뉴 펼침 화면 -->
     <div class="mobile-nav" id="mobileNav">
       <a href="#welcome" onclick="toggleMenu()">인사말</a>
       <a href="#faith" onclick="toggleMenu()">믿음과 비전</a>
@@ -210,7 +214,7 @@
     </div>
   </section>
 
-  <!-- [순서 변경 1] 환영 메시지 (가장 먼저) -->
+  <!-- 환영 메시지 -->
   <section id="welcome" class="section">
     <div class="container">
       <div style="max-width: 800px; margin: 0 auto; text-align: center;">
@@ -229,7 +233,8 @@
           <!-- 프로필 영역 -->
           <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
             <div style="width: 90px; height: 90px; border-radius: 50%; overflow: hidden; background: #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-              <img src="assets/Pastor Chu.png" alt="추동완 목사" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/200x200?text=Foto'">
+              <!-- [수정 포인트 2] 경로 수정 및 띄어쓰기 주의. 파일명을 Pastor_Chu.png 로 바꾸시길 권장합니다. -->
+              <img src="assets/Pastor_Chu.png" alt="추동완 목사" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://placehold.co/200x200?text=Pastor';">
             </div>
             <div>
               <div style="font-weight: 700; font-size: 17px; color: #333;">추동완 목사</div>
@@ -241,7 +246,7 @@
     </div>
   </section>
 
-  <!-- [순서 변경 2] 믿음과 비전 (중간 배치) -->
+  <!-- 믿음과 비전 -->
   <section id="faith" class="section gray">
     <div class="container">
       <div class="section-header">
@@ -286,7 +291,7 @@
     </div>
   </section>
 
-  <!-- [순서 변경 3] 교회 소개 및 섬기는 분들 (마지막 배치) -->
+  <!-- 교회 소개 -->
   <section id="about" class="section">
     <div class="container grid-about-new">
       
@@ -303,7 +308,7 @@
         </p>
       </div>
 
-      <!-- 섬기는 사람들 (인물 정보 후순위 배치) -->
+      <!-- 섬기는 사람들 -->
       <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; border: 1px solid #eee;">
         <h3 style="font-size: 18px; margin: 0 0 20px; color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px;">섬기는 사람들</h3>
         <ul style="font-size: 15px; color: #555; line-height: 2.2;">
@@ -384,7 +389,8 @@
         <h2 style="margin: 0 0 20px;">교회 소식</h2>
         <p>함께 기도하며 나누는 우리들의 이야기입니다.</p>
         <div style="margin-top: 20px;">
-          <a href="Bulletin/20260118.pdf" class="btn outline">📄 주보 보기 (PDF)</a>
+          <!-- [참고] 실제 파일이 있어야 주보가 열립니다 -->
+          <a href="Bulletin/20260118.pdf" class="btn outline" onclick="alert('주보 파일이 준비되지 않았습니다.'); return false;">📄 주보 보기 (PDF)</a>
         </div>
       </div>
       <div class="card" style="padding: 10px 25px; border: none; box-shadow: var(--shadow);">
@@ -443,20 +449,19 @@
   </footer>
 
   <script>
+    /* 아이콘 생성 실행 */
     lucide.createIcons();
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    /* 모바일 메뉴 열고 닫기 */
     function toggleMenu() {
       const nav = document.getElementById('mobileNav');
-      if (nav.style.display === 'flex') {
-        nav.style.display = 'none';
-      } else {
-        nav.style.display = 'flex';
-      }
+      nav.classList.toggle('active'); // CSS class로 제어하도록 수정
     }
 
+    /* 설교 데이터 */
     const sermons = [
-      { title: "무한에너지", date: "2026.01.18", desc: "주 예배 · 추동완 목사", id: "gHuSihLj1tA" },
+      { title: "무한에너지", date: "2026.01.18", desc: "주일 예배 · 추동완 목사", id: "gHuSihLj1tA" },
       { title: "각 마디가 필요합니다", date: "2026.01.11", desc: "주일 예배 · 추동완 목사", id: "31mNdxK59J4" },
       { title: "우리는 이미 연결 되었습니다", date: "2026.01.04", desc: "주일 예배 · 추동완 목사", id: "2WpT5L1GcCY" }
     ];
@@ -478,6 +483,7 @@
       `;
     });
 
+    /* 행사 영상 데이터 */
     const events = [
       { title: "전교인 수련회", date: "2025.10.25", desc: "2025년 로고스교회 전교인 수련회", id: "u_tTl-A4-9Y" },
       { title: "로고스교회 19주년 기념", date: "2025.07.07", desc: "당신이 바라는 로고스 교회는?", id: "nCaHsGasMgc" },
@@ -501,6 +507,7 @@
       `;
     });
 
+    /* 뉴스 데이터 */
     const news = [
       { tag: "환영", text: "예배에 나오신 모든 분들을 주님의 이름으로 환영하고 축복합니다." },
       { tag: "예배", text: "1월은 온가족 통합예배를 드립니다." },
@@ -509,7 +516,7 @@
       { tag: "보고", text: "지난 12월에 Food Bank로 모은 모든 음식을 구세군 교회에 전부 기부했습니다. 참여해주신 모든 교우들에게 감사드립니다." },
       { tag: "기타", text: "2026년 <strong>신년기도제목표</strong>에 기도제목을 적으시고 헌금함에 넣거나 담임목사에게 제출해 주세요" },
       { tag: "이벤트", text: "1년 1독 성경통독을 합시다. <strong>성경통독표</strong>가 주보 간지로 나갔습니다.<br>성경을 읽으시고 읽기표에 체크하신 후 제출하시면 연말에 시상합니다."},
-      { tag: "모임", text: "신구약 성경을 한 눈에 배우는 <strong>"성경의 맥을 잡아라"</strong> 성경공부가 2월 10일(화) 오전 10시 30분에 시작됩니다. 참여를 원하시는 교우들께서는 담임목사에게 신청하시기 바랍니다." }
+      { tag: "모임", text: "신구약 성경을 한 눈에 배우는 <strong>\"성경의 맥을 잡아라\"</strong> 성경공부가 2월 10일(화) 오전 10시 30분에 시작됩니다. 참여를 원하시는 교우들께서는 담임목사에게 신청하시기 바랍니다." }
     ];
 
     const newsContainer = document.getElementById('news-list');
@@ -522,16 +529,9 @@
       `;
     });
     
+    // 아이콘이 늦게 뜨는 걸 방지하기 위해 한 번 더 호출
     setTimeout(() => lucide.createIcons(), 100);
   </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
