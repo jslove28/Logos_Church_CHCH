@@ -390,7 +390,7 @@
         <p>함께 기도하며 나누는 우리들의 이야기입니다.</p>
         <div style="margin-top: 20px;">
           <!-- [참고] 실제 파일이 있어야 주보가 열립니다 -->
-          <a href="Bulletin/20260125.pdf" class="btn outline" target="_blank">📄 주보 보기 (PDF)</a>
+          <a href="Bulletin/20260201.pdf" class="btn outline" target="_blank">📄 주보 보기 (PDF)</a>
         </div>
       </div>
       <div class="card" style="padding: 10px 25px; border: none; box-shadow: var(--shadow);">
@@ -461,9 +461,9 @@
 
     /* 설교 데이터 */
     const sermons = [
+      { title: "새로운 시작", date: "2026.02.01", desc: "주일 예배 · 추동완 목사", id: "7D8S4c4pP-w" },
       { title: "삶을 잇는 믿음", date: "2026.01.25", desc: "주일 예배 · 추동완 목사", id: "gFJSWtZHpUs" },
-      { title: "무한에너지", date: "2026.01.18", desc: "주일 예배 · 추동완 목사", id: "gHuSihLj1tA" },
-      { title: "각 마디가 필요합니다", date: "2026.01.11", desc: "주일 예배 · 추동완 목사", id: "31mNdxK59J4" }
+      { title: "무한에너지", date: "2026.01.18", desc: "주일 예배 · 추동완 목사", id: "gHuSihLj1tA" }
     ];
 
     const sermonContainer = document.getElementById('sermon-list');
@@ -510,13 +510,11 @@
     /* 뉴스 데이터 */
     const news = [
       { tag: "환영", text: "예배에 나오신 모든 분들을 주님의 이름으로 환영하고 축복합니다." },
-      { tag: "모임", text: "오늘 예배와 교제 후에 <strong>신입/전입 집사 교육</strong>이 있습니다." },
-      { tag: "예배", text: "다음 주 예배는 <strong>온가족예배</strong>로 드려지고, <strong>교회학교 진급식</strong>이 있습니다." },
-      { tag: "기타", text: "2026년 <strong>신년기도제목표</strong>에 기도제목을 적으시고 헌금함에 넣거나 담임목사에게 제출해 주세요" },
-      { tag: "이벤트", text: "1년 1독 성경통독을 합시다. <strong>성경통독표</strong>가 주보 간지로 나갔습니다.<br>성경을 읽으시고 읽기표에 체크하신 후 제출하시면 연말에 시상합니다."},
+      { tag: "예배", text: "오늘 예배는 온가족예배로 드려지고 교회학교 진급식이 있습니다." },
+      { tag: "모임", text: "<strong>2월 7일 토요일</strong>에 신학기 맞이 온가족새벽기도가 <strong>오전 7시, 소예배실</strong>에서 있습니다. (주보에는 6시라 되어있으나 7시입니다.)" },
       { tag: "모임", text: "신구약 성경을 한 눈에 배우는 <strong>\"성경의 맥을 잡아라\"</strong> 성경공부가 2월 10일(화) 오전 10시 30분에 시작됩니다. 참여를 원하시는 교우들께서는 담임목사에게 신청하시기 바랍니다." },
-      { tag: "공지", text: "뉴질랜드 지방회가 2월 2일(월)-4일(수)까지 있습니다." },
-      { tag: "공지", text: "예배, 봉사위원 수고에 감사드리며 2월 예배,봉사 위원을 위촉합니다.<br>  <strong>안내: 조옥히 집사 / 뒷정리: 박정래 장로 / 헌금계수: 윤정내 집사 / 주방봉사: 목회자팸</strong>" },
+      { tag: "공지", text: "뉴질랜드 지방회가 2월 2일(월)-4일(수)까지 있습니다. 이번주 <strong>화, 수 새벽기도</strong>는 개인경건 시간으로 대체합니다." },
+      { tag: "공지", text: "2026년 새로운 소그룹 프로젝트 <strong>Faithbridge FAM</strong>이 게시판에 있습니다." }
     ];
 
     const newsContainer = document.getElementById('news-list');
@@ -535,6 +533,7 @@
 
 </body>
 </html>
+
 
 
 
